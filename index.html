@@ -3,80 +3,190 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>HTML & CSS Experiments by Patrick Lima</title>
-    <meta
-      name="description"
-      content="Experiments demonstrating HTML and CSS power, and what's now possible to do on the web."
-    />
+    <title>Experiments by Patrick Lima</title>
+    <meta name="description" content="Experiments with HTML & CSS and data analisys with big data." />
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   </head>
 
   <body>
     <div class="wrapper">
-      <nav>
-        <a href="#">
-          <img src="assets/img/logo.png" alt="logo" />
-        </a>
-      </nav>
+      <div class="container">
+        <div class="grid">
+          <div class="first-column">
+            <header>
+              <a href="#">
+                <svg width="250" height="30" viewBox="0 0 176 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 14L6.5 8L5.72205e-06 2L2.00001 1.52588e-05L10.8448 8.00002L2.00001 16L0 14Z" fill="white" />
+                  <path d="M164 15L176 14.9442V13H164V15Z" fill="white" />
+                  <path
+                    d="M21.2985 1.23206C22.5317 1.23206 23.5991 1.43187 24.5007 1.83151C25.4156 2.23114 26.1184 2.79836 26.609 3.53316C27.0996 4.26797 27.3449 5.13814 27.3449 6.14366C27.3449 7.1363 27.0996 8.00646 26.609 8.75416C26.1184 9.48897 25.4156 10.0562 24.5007 10.4558C23.5991 10.8426 22.5317 11.0359 21.2985 11.0359H18.4942V14.768H15.2721V1.23206H21.2985ZM21.1195 8.48344C22.0875 8.48344 22.8234 8.28363 23.3272 7.88399C23.8311 7.47147 24.083 6.89136 24.083 6.14366C24.083 5.38307 23.8311 4.80296 23.3272 4.40333C22.8234 3.99081 22.0875 3.78455 21.1195 3.78455H18.4942V8.48344H21.1195Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M38.1149 11.8674H31.6509L30.4178 14.768H27.1161L33.3216 1.23206H36.5039L42.7292 14.768H39.348L38.1149 11.8674ZM37.1006 9.48897L34.8928 4.30665L32.6851 9.48897H37.1006Z"
+                    fill="white"
+                  />
+                  <path d="M46.3584 3.78455H41.9032V1.23206H54.0356V3.78455H49.5804V14.768H46.3584V3.78455Z" fill="white" />
+                  <path
+                    d="M64.6399 14.768L61.9548 10.9973H58.9913V14.768H55.7693V1.23206H61.7957C63.0288 1.23206 64.0962 1.43187 64.9979 1.83151C65.9128 2.23114 66.6155 2.79836 67.1061 3.53316C67.5967 4.26797 67.842 5.13814 67.842 6.14366C67.842 7.14919 67.5901 8.01935 67.0863 8.75416C66.5956 9.47607 65.8929 10.0304 64.978 10.4171L68.1006 14.768H64.6399ZM64.5802 6.14366C64.5802 5.38307 64.3283 4.80296 63.8244 4.40333C63.3206 3.99081 62.5847 3.78455 61.6167 3.78455H58.9913V8.50278H61.6167C62.5847 8.50278 63.3206 8.29652 63.8244 7.88399C64.3283 7.47147 64.5802 6.89136 64.5802 6.14366Z"
+                    fill="white"
+                  />
+                  <path d="M70.3949 1.23206H73.6169V14.768H70.3949V1.23206Z" fill="white" />
+                  <path
+                    d="M83.5839 15C82.1652 15 80.879 14.7035 79.7254 14.1105C78.5851 13.5046 77.6834 12.6731 77.0205 11.616C76.3708 10.5461 76.0459 9.34072 76.0459 8.00002C76.0459 6.65932 76.3708 5.46042 77.0205 4.40333C77.6834 3.33335 78.5851 2.50186 79.7254 1.90885C80.879 1.30296 82.1718 1.00002 83.6038 1.00002C84.8104 1.00002 85.8977 1.20628 86.8657 1.6188C87.8469 2.03132 88.6689 2.62432 89.3319 3.39781L87.2634 5.25416C86.322 4.19707 85.1552 3.66852 83.7629 3.66852C82.9011 3.66852 82.132 3.85545 81.4558 4.2293C80.7795 4.59025 80.2492 5.09946 79.8646 5.75692C79.4934 6.41438 79.3077 7.16208 79.3077 8.00002C79.3077 8.83795 79.4934 9.58565 79.8646 10.2431C80.2492 10.9006 80.7795 11.4162 81.4558 11.7901C82.132 12.151 82.9011 12.3315 83.7629 12.3315C85.1552 12.3315 86.322 11.7965 87.2634 10.7265L89.3319 12.5829C88.6689 13.3693 87.8469 13.9687 86.8657 14.3812C85.8845 14.7938 84.7905 15 83.5839 15Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M96.5795 9.45029L94.7099 11.3453V14.768H91.5078V1.23206H94.7099V7.55526L100.876 1.23206H104.456L98.6878 7.26521L104.794 14.768H101.035L96.5795 9.45029Z"
+                    fill="white"
+                  />
+                  <path d="M112.052 1.23206H113.524V13.5304H121.321V14.768H112.052V1.23206Z" fill="white" />
+                  <path d="M123.765 1.23206H125.236V14.768H123.765V1.23206Z" fill="white" />
+                  <path
+                    d="M144.226 1.23206V14.768H142.814V3.93924L137.344 13.047H136.648L131.178 3.99725V14.768H129.766V1.23206H130.98L137.026 11.268L143.013 1.23206H144.226Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M157.493 11.1519H149.737L148.066 14.768H146.535L152.899 1.23206H154.351L160.716 14.768H159.164L157.493 11.1519ZM156.956 9.99173L153.615 2.72101L150.274 9.99173H156.956Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+              <p>
+                Experimental Laboratory on Web Design and Data Science projects.
+              </p>
+            </header>
 
-      <header>
-        <h1 class="anim">Labs</h1>
-        <p class="anim">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse illum
-          commodi aperiam! In quo enim esse, tenetur. Ab voluptatem alias
-          aliquid harum corporis quos, pariatur libero ex ipsam beatae eius.
-        </p>
-      </header>
+            <h4 class="subheading">Web Design</h4>
 
-      <div class="projects">
-        <a href="2020/mondrian-grid/index.html">
-          <img
-            class="anim project-1"
-            src="assets/img/project1.jpg"
-            alt="project img"
-          />
-        </a>
-        <img
-          class="anim project-2"
-          src="assets/img/project2.jpg"
-          alt="project img"
-        />
-        <img
-          class="anim project-3"
-          src="assets/img/project3.jpg"
-          alt="project img"
-        />
-        <img
-          class="anim project-4"
-          src="assets/img/project4.jpg"
-          alt="project img"
-        />
+            <article itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
+              <a href="#" target="_blank" rel="noopener" class="p-40"
+                ><h6 class="uppercase">
+                  HTML
+                </h6>
+                <h3 itemprop="name" class="mt-8">
+                  Project Name
+                </h3>
+                <p class="mt-8">
+                  An immutable library to create.
+                </p>
+              </a>
+            </article>
+
+            <article itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
+              <a href="#" target="_blank" rel="noopener" class="p-40"
+                ><h6 class="uppercase">
+                  CSS
+                </h6>
+                <h3 itemprop="name" class="mt-8">
+                  Project Name
+                </h3>
+                <p class="mt-8">
+                  An immutable library to create.
+                </p>
+              </a>
+            </article>
+
+            <article itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
+              <a href="#" target="_blank" rel="noopener" class="p-40"
+                ><h6 class="uppercase">
+                  HTML
+                </h6>
+                <h3 itemprop="name" class="mt-8">
+                  Project Name
+                </h3>
+                <p class="mt-8">
+                  An immutable library to create.
+                </p>
+              </a>
+            </article>
+
+            <article itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
+              <a href="#" target="_blank" rel="noopener" class="p-40"
+                ><h6 class="uppercase">
+                  CSS
+                </h6>
+                <h3 itemprop="name" class="mt-8">
+                  Project Name
+                </h3>
+                <p class="mt-8">
+                  An immutable library to create.
+                </p>
+              </a>
+            </article>
+
+            <a href="">
+              <h3>Para mais...</h3>
+            </a>
+          </div>
+
+          <div class="second-column">
+
+            <h4 class="subheading">Data Science & Big Data</h4>
+
+            <article itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
+              <a href="#" target="_blank" rel="noopener" class="p-40"
+                ><h6 class="uppercase">
+                  Big Data
+                </h6>
+                <h3 itemprop="name" class="mt-8">
+                  Project Name
+                </h3>
+                <p class="mt-8">
+                  An immutable library to create.
+                </p>
+              </a>
+            </article>
+
+            <article itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
+              <a href="#" target="_blank" rel="noopener" class="p-40"
+                ><h6 class="uppercase">
+                  Artificial Inteligence
+                </h6>
+                <h3 itemprop="name" class="mt-8">
+                  Project Name
+                </h3>
+                <p class="mt-8">
+                  An immutable library to create.
+                </p>
+              </a>
+            </article>
+
+            <article itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
+              <a href="#" target="_blank" rel="noopener" class="p-40"
+                ><h6 class="uppercase">
+                  Data Visualization
+                </h6>
+                <h3 itemprop="name" class="mt-8">
+                  Project Name
+                </h3>
+                <p class="mt-8">
+                  An immutable library to create.
+                </p>
+              </a>
+            </article>
+
+            <article itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
+              <a href="#" target="_blank" rel="noopener" class="p-40"
+                ><h6 class="uppercase">
+                  Data Science
+                </h6>
+                <h3 itemprop="name" class="mt-8">
+                  Project Name
+                </h3>
+                <p class="mt-8">
+                  An immutable library to create.
+                </p>
+              </a>
+            </article>
+
+            <a href="">
+              <h3>Para mais...</h3>
+            </a>
+          </div>
+        </div>
       </div>
-
-      <div class="header-secondary">
-        <h1 class="anim">Other Projects</h1>
-        <p class="anim">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus sit
-          necessitatibus, eos minima odio, ea ipsam, dicta nihil praesentium
-          soluta fugit aspernatur nisi enim libero quos omnis? Optio suscipit
-          quibusdam incidunt maiores repudiandae laudantium eaque, obcaecati
-          totam architecto aut ab?
-        </p>
-      </div>
-
-      <div class="work-secondary">
-        <img class="anim" src="assets/img/project5.jpg" alt="project img" />
-        <img class="anim" src="assets/img/project6.jpg" alt="project img" />
-      </div>
-
-      <footer>
-        <p>Labs | Patrick Lima</p>
-      </footer>
     </div>
-    <script type="text/javascript">
-      window.sr = ScrollReveal();
-      sr.reveal(".anim");
-    </script>
   </body>
 </html>
