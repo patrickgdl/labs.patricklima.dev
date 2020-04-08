@@ -24,18 +24,23 @@ const Project = node => {
   };
 };
 
+
+var figmaKey = config.FIGMA_KEY;
+var projectKey = config.PROJECT_KEY;
+
 var myHeaders = new Headers();
-myHeaders.append('X-Figma-Token', '');
+myHeaders.append('X-Figma-Token', figmaKey);
 
 var myInit = { method: 'GET', headers: myHeaders, mode: 'cors', cache: 'default' };
 
-var myRequest = new Request('https://api.figma.com/v1/files/6KlRIWIcxaYVzRVdyS9U3J', myInit);
+var myRequest = new Request(`https://api.figma.com/v1/files/${projectKey}`, myInit);
 
 fetch(myRequest)
   .then(function(response) {
     return response.json()
   })
-  .then(data => {    
+  .then(data => {
+    console.log(data)
     const nodes = data.document.children;
     const projects = nodes.map(node => Project(node));
 
