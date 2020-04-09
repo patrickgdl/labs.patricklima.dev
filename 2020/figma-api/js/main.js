@@ -66,7 +66,7 @@ const _projectScreens = project => {
 
   url.search = new URLSearchParams(params).toString();
 
-  fetch(url, myInit)
+  return fetch(url, myInit)
     .then(response => {
       return response.json();
     })
@@ -81,14 +81,15 @@ const _projectScreens = project => {
       });
 
       console.log('screen image', screenImages);
+
+      return screens;
+    })
+    .then(screen => {
+      console.log('screens', screens);
+
+      var img = document.getElementById('cv');
+      img.src = screen['1:2'].image;
     });
-
-  // Object.keys(screenImages).forEach(function(id) {
-  //   const image = screenImages[id];
-  //   screens[id].image = image;
-  // });
-
-  // return screens;
 };
 
 var requestFiles = new Request(`${BASE_URL}/files/${projectKey}`, myInit);
