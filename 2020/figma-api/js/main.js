@@ -1,9 +1,9 @@
-var figmaKey = config.FIGMA_KEY;
-var projectKey = config.PROJECT_KEY;
+const { FIGMA_KEY, FIGMA_PROJECT_KEY } = process.env;
+
 var BASE_URL = 'https://api.figma.com/v1';
 
 var myHeaders = new Headers();
-myHeaders.append('X-Figma-Token', figmaKey);
+myHeaders.append('X-Figma-Token', FIGMA_KEY);
 
 var myInit = { method: 'GET', headers: myHeaders, mode: 'cors', cache: 'default' };
 
@@ -60,7 +60,7 @@ const _projectScreens = project => {
   console.log('frames', screens);
 
   // building the image request
-  var url = new URL(`${BASE_URL}/images/${projectKey}`);
+  var url = new URL(`${BASE_URL}/images/${FIGMA_PROJECT_KEY}`);
   var ids = Object.keys(screens);
   var params = { ids: ids.join(','), scale: 2 };
 
@@ -92,7 +92,7 @@ const _projectScreens = project => {
     });
 };
 
-var requestFiles = new Request(`${BASE_URL}/files/${projectKey}`, myInit);
+var requestFiles = new Request(`${BASE_URL}/files/${FIGMA_PROJECT_KEY}`, myInit);
 
 fetch(requestFiles)
   .then(response => {
