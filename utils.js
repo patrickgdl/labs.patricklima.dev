@@ -24,11 +24,11 @@ export const frontExperiments = [
     url: '/2020/canvas-experiments/index.html',
   },
   {
-    subTitle: 'SVG',
-    title: 'After Effects export to SVG/Canvas',
-    description: 'Experiments on Lottie, After Effects plugin for exporting animations to web.',
-    url: '/2020/lottie-web-ae/index.html',
-  }
+    subTitle: 'CSS',
+    title: 'Wedding RSVP',
+    description: 'Example of a wedding RSVP in PT-Br.',
+    url: '/2022/wedding-rsvp/index.html',
+  },
 ];
 
 export const dataScienceExperiments = [
@@ -49,7 +49,7 @@ export const dataScienceExperiments = [
     title: 'Project Name',
     description: 'To be created',
     url: '#',
-  }
+  },
 ];
 
 /**
@@ -59,11 +59,11 @@ export const dataScienceExperiments = [
  */
 export function renderExperiments(array, idElement) {
   // check if is less than six to identify and render dummie elements
-  const numberOfDummieElements = array.length < 7 ? (6 - array.length) : array.length
+  const numberOfDummieElements = array.length < 7 ? 6 - array.length : array.length;
 
-  debugger
-  document.getElementById(idElement).innerHTML = array.map(experiment => { 
-    return `
+  document.getElementById(idElement).innerHTML = array
+    .map((experiment) => {
+      return `
       <article itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
         <a href=${experiment.url} class="content">
           <h6>
@@ -77,6 +77,7 @@ export function renderExperiments(array, idElement) {
           </p>
         </a>
       </article>
-    `
-  }).join('')
+    `;
+    })
+    .join('');
 }
