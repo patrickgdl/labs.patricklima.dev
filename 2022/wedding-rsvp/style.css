@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f0eee2;
+  font-family: "Raleway", sans-serif;
+  color: #4e4b43;
+}
+
+h1 {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+.large-font {
+  font-size: 2.5rem;
+}
+
+.gold-gradient {
+  background: -webkit-linear-gradient(#f5d0a9, #c58568);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.accent-font {
+  font-family: "Playfair Display", serif;
+}
+
+/* LAYOUT */
+.container {
+  box-sizing: border-box;
+  width: 850px;
+  height: 1200px;
+  margin: 20px auto;
+  background-image: url("img/tree-leafs.png"), url("img/texture.jpg");
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 200px auto;
+  }
+}
+
+.contents {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.8fr 0.5fr 1fr;
+  grid-template-areas: "one one" "two three" "four four";
+  padding-top: 300px;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+  border-top: 2px solid #cccac4;
+  border-bottom: 2px solid #cccac4;
+}
+
+.three {
+  grid-area: three;
+  border-top: 2px solid #cccac4;
+  border-left: 2px solid #cccac4;
+  border-bottom: 2px solid #cccac4;
+}
+
+.four {
+  grid-area: four;
+}
+
+.two,
+.three,
+.four {
+  padding: 25px 0;
+}
+
+.one h2 {
+  margin-bottom: 40px;
+}
+
+.two h1 {
+  text-transform: uppercase;
+}
+
+.two h2 span {
+  color: #c58568;
+  font-weight: bold;
+}
+
+.two .date {
+  display: flex;
+  width: 100px;
+  margin: 10px auto;
+  justify-content: center;
+}
+
+.two .date h2 {
+  color: #c58568;
+  font-weight: bold;
+}
+
+.two .date .day h2 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+
+.three h1:nth-of-type(1),
+.three h1:nth-of-type(2) {
+  color: #c58568;
+  font-weight: bold;
+}
+
+.three h1:nth-of-type(2) {
+  margin-bottom: 20px;
+}
+
+.four h1 {
+  font-size: 1.25rem;
+}
+
+.four h1:nth-of-type(2) {
+  font-size: 2rem;
+  color: #c58568;
+  margin: 30px 0;
+}
+
+.four h2 {
+  font-size: 1rem;
+}
+
+/* TOGGLE STYLING */
+
+.toggle {
+  margin: 1.5rem 0;
+  font-size: 0;
+}
+
+.toggle input {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -9999px;
+}
+
+.toggle input + label {
+  margin: 0;
+  padding: 0.5rem 2rem;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  border: solid 1px #ddd;
+  background-color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  transition: border-color 0.15s ease-out, color 0.25s ease-out,
+    background-color 0.15s ease-out, box-shadow 0.15s ease-out;
+}
+
+.toggle input + label:first-of-type {
+  border-right: none;
+}
+
+.toggle input + label:last-of-type {
+  border-left: none;
+}
+
+.toggle input:checked + label {
+  background-color: #4d8b59;
+  color: #fff;
+  box-shadow: 0 0 10px #8da87a78;
+  border-color: #4d8b59;
+  z-index: 1;
+}
+
+button {
+  margin: 1.5rem 0;
+  padding: 0.5rem 2rem;
+  background-color: #4d8b59;
+  color: #fff;
+  border: solid 1px #4d8b59;
+  box-shadow: 0 0 10px #8da87a78;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
